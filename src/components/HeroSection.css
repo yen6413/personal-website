@@ -1,0 +1,43 @@
+/* src/components/HeroSection.css */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 40px;
+  padding: 30px;
+}
+
+.hero-left {
+  flex: 1; /* Takes up available space */
+  min-width: 300px; /* Minimum width before wrapping */
+}
+
+.hero-right {
+  flex: 2; /* Takes up more space */
+  min-width: 400px; /* Minimum width before wrapping */
+}
+
+.hero-right h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hero-right .tagline {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-left, .hero-right {
+    min-width: unset; /* Remove min-width on small screens */
+    width: 100%;
+  }
+  .hero-right {
+    text-align: center;
+  }
+}

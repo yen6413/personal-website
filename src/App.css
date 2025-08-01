@@ -1,38 +1,96 @@
-.App {
+/* src/App.css */
+body {
+  font-family: 'EB Garamond', serif; /* Fallback to a generic serif font */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+
+   /* Patrick Bateman Card Background: */
+  background-color: #f7f5ed; /* A warm, off-white/bone color */
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png"); /* Path to your downloaded texture */
+  background-repeat: repeat; /* This is crucial for tiling the texture */
+  background-size: auto; /* Or specify a size like '200px 200px' if your texture is small */
+
+  /* Optional: subtle shadow for depth, mimicking letterpress slightly */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Very subtle inner shadow */
+}
+
+.app-container {
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* --- REMOVED BOX STYLES --- */
+.hero-header {
   text-align: center;
+  padding: 40px 20px;
+  /* background-color: #fff; */ /* REMOVED */
+  /* border-radius: 8px; */ /* REMOVED */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */ /* REMOVED */
+  margin-bottom: 3px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-header h1,
+.hero-header .tagline {
+  font-family: 'EB Garamond', serif;
+  text-transform: uppercase; /* Convert to uppercase */
+  font-feature-settings: "smcp"; /* Try to enable small-caps if font supports */
+  letter-spacing: 0.1em; /* Add a little spacing */
+  font-weight: 500; /* Adjust weight */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* --- REMOVED BOX STYLES --- */
+.images-section {
+  padding: 4px 0px;/* Padding for top/bottom */
+  margin-bottom: 4px;
+  text-align: center;
+
+  /* Break out of the app-container's max-width */
+  width: 100vw; /* Takes 100% of the viewport width */
+  position: relative; /* Needed for positioning with left/transform */
+  left: 50%; /* Shift to the center of the screen */
+  transform: translateX(-50%); /* Shift back by half its own width to truly center */
+
+  /* Ensure no background/shadow that would create a box */
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.images-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* --- REMOVED BOX STYLES --- */
+.projects-section-wrapper {
+  /* background-color: #fff; */ /* REMOVED */
+  /* border-radius: 8px; */ /* REMOVED */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */ /* REMOVED */
+  padding: 40px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-header h1 {
+    font-size: 2.5em;
+  }
+  .hero-header .tagline {
+    font-size: 1.1em;
+  }
+  .images-section h2, .projects-section h2 {
+    font-size: 2em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project-card h3 {
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
+    font-size: 1.1em; /* Make it slightly smaller than regular uppercase */
+    font-weight: 500;
+    letter-spacing: 0.05em;
 }

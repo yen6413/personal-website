@@ -1,0 +1,85 @@
+/* src/components/ImageCarousel.css */
+.image-carousel-container {
+  overflow-x: hidden; /* Keep this to hide the scrollbar */
+  position: relative;
+  padding-top: 50px;
+
+  /* The actual full width is handled by .images-section */
+  /* This container itself should simply fill its parent's width */
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+}
+
+/* Gradient fades - ensure their background matches your body background color */
+.image-carousel-container::before,
+.image-carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 10;
+  pointer-events: none;
+  /* Make sure this color matches your body's background-color for a seamless fade */
+  /*background: linear-gradient(to right, #f7f5ed, rgba(247, 245, 237, 0)); */
+}
+
+.image-carousel-container::after {
+  right: 0;
+  /* background: linear-gradient(to left, #f7f5ed, rgba(247, 245, 237, 0)); */
+}
+
+.image-carousel {
+  display: flex;
+  gap: 20px;
+  /* Important: no horizontal padding here, or it will create empty space on the sides */
+  /* Instead, apply padding to individual carousel-item or use gap more effectively */
+  padding: 0; /* Remove padding here as the container will provide padding if needed */
+
+  animation: scroll-right var(--animation-duration, 30s) linear infinite;
+  animation-play-state: running;
+}
+
+.image-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  overflow: visible; /* <-- Change from hidden to visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+.carousel-item:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  /* Add transition for smooth scaling */
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+/* Specific sizing classes (remain the same) */
+.carousel-item.square-large { width: 350px; height: 350px; }
+.carousel-item.horizontal { width: 400px; height: 250px; }
+.carousel-item.vertical { width: 300px; height: 450px; }
