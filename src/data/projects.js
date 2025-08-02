@@ -36,7 +36,14 @@ const projects = [
     technologies: ["Java", "Swing", "Object-Oriented Programming", "Voice Recognition"],
     link: "https://smartpixelcalculator.netlify.app/",
     github: "https://github.com/yen6413/smart-calculator-project"
-  }
+  },
+  {
+    id: 6,
+    title: "Immigration Petition Review",
+    description: "Collaborated with a team of 3 to design and implement a proof-of-concept immigration processing system. Contributed to the full software development lifecycle, including requirements gathering, design, implementation, testing, and deployment using JavaFX for the UI and MySQL for database management. Automated build and deployment pipelines with Docker and GitHub Actions, and created UML diagrams (Use Case, Class, Component) to document system architecture while following Agile Scrum methodologies.",
+    technologies: ["JavaFX", "Java", "MySQL", "Docker", "GitHub Actions", "Agile", "UML"],
+    github: "https://github.com/jdemchak/newworker"
+}
 
   // Add more projects as needed
 ];
