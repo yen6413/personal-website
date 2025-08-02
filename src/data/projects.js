@@ -4,7 +4,7 @@ const projects = [
     id: 1,
     title: "Odysseus Advisor",
     description: "Developed a college course advisory interface served to over 2,000 unique users. Designed an instructor data display page using Prisma database calls and improved load time through efficient component structuring and Vite's optimized build process. Containerized the application with Docker for consistent development and streamlined deployment.",
-    technologies: ["React", "Docker", "Vite", "Node.js", "HTML", "JavaScript", "Prisma"],
+    technologies: ["React", "Docker", "Node.js", "HTML", "JavaScript", "Prisma"],
     link: "https://odyadvisor.com",
     github: "https://github.com/Odysseus-Academic/advisor",
   },
