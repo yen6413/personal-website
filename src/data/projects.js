@@ -9,13 +9,6 @@ const projects = [
     github: "https://github.com/Odysseus-Academic/advisor",
   },
   {
-    id: 2,
-    title: "NBA Player Dashboard",
-    description: "Developed a full-stack web application for Browse and analyzing NBA player statistics. Features include dynamic client-side sorting, debounced search, and filtering by season and team. Built with a React frontend and a Node.js/Express backend that interacts with a PostgreSQL database.",
-    technologies: ["React", "Node.js", "Express", "PostgreSQL", "Python"],
-    github: "https://github.com/yen6413/nba-player-dashboard"
-  },
-  {
     id: 3,
     title: "HIY Task Manager",
     description: "Implemented a Unix-based task manager in C that supports process management, task scheduling, file redirection, piping, and signal handling.",
