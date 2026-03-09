@@ -15,13 +15,13 @@ const projects = [
     technologies: ["C", "Unix", "Makefile", "Processes", "Signals"],
     github: "https://github.com/yen6413/HIY-Task-Manager",
   },
-  {
-    id: 4,
-    title: "Zombie Apocalypse Route Planner",
-    description: "An interactive web app that helps you plan the safest and most resourceful route through a zombie-infested city using real OpenStreetMap data. Features include map generation, resource-aware Dijkstra pathfinding, and algorithm visualization.",
-    technologies: ["Python", "Flask", "JavaScript", "Leaflet", "OpenStreetMap", "HTML", "CSS"],
-    github: "https://github.com/yen6413/zombie-apocalypse-route-planner"
-  },
+  // {
+  //   id: 4,
+  //   title: "Zombie Apocalypse Route Planner",
+  //   description: "An interactive web app that helps you plan the safest and most resourceful route through a zombie-infested city using real OpenStreetMap data. Features include map generation, resource-aware Dijkstra pathfinding, and algorithm visualization.",
+  //   technologies: ["Python", "Flask", "JavaScript", "Leaflet", "OpenStreetMap", "HTML", "CSS"],
+  //   github: "https://github.com/yen6413/zombie-apocalypse-route-planner"
+  // },
   {
     id: 5,
     title: "Smart Calculator",
